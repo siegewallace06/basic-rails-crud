@@ -1,0 +1,24 @@
+=============================
+Installation
+=============================
+Steps on how to install Ruby on Rails
+
+References:
+https://guides.rubyonrails.org/getting_started.html#creating-a-new-rails-project-installing-rails
+
+Basic Steps:
+1. Install Node js
+2. Install git
+3. Install yarn
+
+To install ruby on windows go to this link:
+https://rubyinstaller.org/downloads/
+
+Then to install rails do this command
+gem install rails
+
+To setup a new rails project do this command:
+rails new myapp
+
+gem is a package manager for ruby
+rails is a framework for ruby
