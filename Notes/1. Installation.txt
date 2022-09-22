@@ -22,3 +22,28 @@ rails new myapp
 
 gem is a package manager for ruby
 rails is a framework for ruby
+
+Rails usually have a problem when installing sqlite3
+To fix this problem do this command:
+gem install sqlite3
+
+I have a problem when installing rails, the problem is:
+TZInfo::DataSourceNotFound: tzinfo-data is not present. Please add gem 'tzinfo-data' to your Gemfile and run bundle install
+
+To fix this remove the gem:
+gem "tzinfo-data", platforms: %i[ mingw mswin x64_mingw jruby ]
+
+into this:
+gem "tzinfo-data"
+
+Then do this command:
+bundle install
+
+To run rails server do this command:
+rails server
+
+To run rails server in a different port do this command:
+rails server -p 3001
+
+open your browser and go to this link:
+http://localhost:3000/
