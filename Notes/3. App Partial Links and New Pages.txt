@@ -1,0 +1,52 @@
+============================
+Links
+============================
+So everything for the header is stored at app/views/layouts/application.html.erb
+
+Here we will try to create about page without Generator.
+
+1. Create a new file in app/views/home called about.html.erb
+2. Go to app/controllers/home_controller.rb and add a new method called about
+3. Go to config/routes.rb and add a new route for about page
+
+Now we can go to http://localhost:3000/about and see the about page.
+
+============================
+Bootstrap
+============================
+Bootstrap is a front-end framework for faster and easier web development. 
+It includes HTML and CSS based design templates for typography, forms, buttons, 
+tables, navigation, modals, image carousels and many other, 
+as well as optional JavaScript extensions.
+
+We will use the CDN version of Bootstrap.
+get it here:
+https://getbootstrap.com/docs/5.2/getting-started/introduction/
+
+============================
+Partials
+============================
+Partials are a way to break up your views into smaller pieces that can be reused in other views.
+
+1. Create a new file in app/views/home called _header.html.erb
+2. Add the embedded ruby code for the header:
+<%= render 'home/header' %>
+
+We will use the Navbar component from Bootstrap.
+https://getbootstrap.com/docs/5.2/components/navbar/
+
+============================
+Links
+============================
+To create link to home page we will use the link_to helper method:
+  <%= link_to "Friend List", root_path, class = "navbar-brand" %>
+
+============================
+Conclusions
+============================
+We have created a simple web application using Ruby on Rails.
+
+The Application erb file is the main layout file for the application.
+To create Partials we use the _file_name.html.erb naming convention.
+We can use the link_to helper method to create links to other pages.
+We can use the Bootstrap framework to create a responsive web application.
