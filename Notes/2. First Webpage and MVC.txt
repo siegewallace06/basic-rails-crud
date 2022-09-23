@@ -1,0 +1,50 @@
+===========================
+Introduction
+===========================
+Rails is an MVC architecture framework
+MVC stands for Model View Controller
+Model is the data layer (Database)
+View is the presentation layer (HTML)
+Controller is the business logic layer (Ruby)
+
+Folder Structure
+> app
+ > app/controllers
+ Here you will find all the controllers
+ > app/models
+ > app/views
+> bin 
+we don't need to touch this folder
+> config
+ > config/routes.rb
+ used to define routes 
+> db
+ > db/migrate
+ used to create database tables
+
+> Gemfile
+gemfile is a file that contains a list of gems that are 
+required for the application to run. 
+It is used by the Bundler gem to install all the required 
+gems for the application. 
+It is also used by the Rails framework to load all 
+the required gems for the application to run.
+
+===========================
+Generators
+===========================
+Generators are used to create files and folders in the
+application.
+
+rails generate controller <controller_name>
+rails generate model <model_name> <column_name>:<column_type>
+rails generate scaffold <model_name> <column_name>:<column_type>
+
+let's create a home controller with index file
+rails generate controller home index
+
+# Defines the root path route ("/")
+root 'home#index'
+
+get list of routes
+rails routes
