@@ -1,0 +1,40 @@
+==========================
+Generate Scaffolds
+==========================
+In rails, Scaffolds is a way to generate a set of files that will allow you 
+to perform CRUD operations on a model. It will generate a controller, views, and a model. 
+It will also generate a migration file that will create the table in the database. 
+The scaffold generator will also add the necessary routes to the routes.rb file.
+
+To generate a scaffold, you can use the following command:
+rails g scaffold <model_name> <field_name>:<field_type> <field_name>:<field_type> ...
+
+Let's create a scaffold for friends.
+We will need First Name, Last Name,Email Address, Phone, and Twitter.
+rails g scaffold Friend first_name:string last_name:string email:string phone:string twitter:string
+
+This will generate a lot of files. Let's take a look at the files that were generated.
+app/controllers/friends_controller.rb
+Above is the controller for the friends model. It will contain the CRUD operations for the model.
+
+app/models/friend.rb
+This is the model for the friends model. It will contain the validations for the model.
+
+app/views/friends
+This is the folder that contains the views for the friends model. 
+It will contain the views for the CRUD operations.
+
+db/migrate/20130313191100_create_friends.rb
+This is the migration file that will create the table in the database.
+
+test/fixtures/friends.yml
+This is the file that will contain the fixtures for the friends model.
+
+test/functional/friends_controller_test.rb
+This is the test file for the friends controller.
+
+test/unit/friend_test.rb
+This is the test file for the friends model.
+
+After that we run this command to create the table in the database.
+rails db:migrate
